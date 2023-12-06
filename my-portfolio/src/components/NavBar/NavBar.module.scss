@@ -1,0 +1,11 @@
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  button {
+    background-color: green;
+  }
+  .currentPage {
+    border-right: aqua solid 2px;
+  }
+}
