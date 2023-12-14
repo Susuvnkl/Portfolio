@@ -1,13 +1,13 @@
 import { useState } from "react";
-import styles from "./NavBar.module.scss";
-import { cc } from "../../utils/Classnames";
+import styles from "./Navbar.module.scss";
+import { cc } from "../../../utils/Classnames";
 
-interface NavBarProps {
+interface NavbarProps {
   setPage: (e: number) => void;
   numberOfPages: number;
 }
 
-function NavBar(props: NavBarProps) {
+function Navbar(props: NavbarProps) {
   const { setPage, numberOfPages } = props;
   const [currentPage, setCurrentPage] = useState<number>(1);
 
@@ -19,7 +19,7 @@ function NavBar(props: NavBarProps) {
   };
 
   return (
-    <div className={styles.NavBar}>
+    <div className={styles.Navbar}>
       {pages.map((page) => (
         <button
           key={page}
@@ -33,4 +33,4 @@ function NavBar(props: NavBarProps) {
   );
 }
 
-export default NavBar;
+export default Navbar;
