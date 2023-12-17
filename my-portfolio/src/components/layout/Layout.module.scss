@@ -1,11 +1,18 @@
 .Layout {
-  position: relative;
-  .Navbar {
-    position: absolute;
-    top: 10%;
-  }
   .Toggle {
-    position: absolute;
-    top: 20%;
+    width: 100%;
+    position: fixed;
+    top: 10%;
+    left: 0;
+  }
+  .Navbar {
+    position: fixed;
+    left: 50px;
+    top: 50vh;
+  }
+}
+.ScrollSnap {
+  section {
+    scroll-snap-align: center;
   }
 }

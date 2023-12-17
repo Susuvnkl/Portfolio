@@ -23,7 +23,7 @@ function useWindowSize() {
 
     window.addEventListener("resize", handleResize);
     handleResize();
-    return () => window.removeEventListener("resize", handleResize); // Clean up
+    return () => window.removeEventListener("resize", handleResize);
   }, [window.innerWidth, window.innerHeight]);
 
   return windowSize;
