@@ -2,4 +2,21 @@
   min-height: 100vh;
   width: 100%;
   border: 10px solid red;
+  .content {
+    padding: 25px;
+    h1 {
+      text-align: center;
+    }
+    .contactMeButton {
+      display: inline;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      cursor: pointer;
+      color: inherit;
+      text-align: left;
+    }
+  }
 }
