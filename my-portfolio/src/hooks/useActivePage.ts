@@ -8,7 +8,7 @@ const useActivePage = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "contact"];
+      const sections = ["home", "about", "projects", "skills", "contact"];
       let foundActive = false;
       console.log("test effect render", location);
 
