@@ -1,3 +1,4 @@
+import BinaryMatrix from "../../components/common/BinaryMouseTrack/BinaryMouseTrack";
 import styles from "./HomePage.module.scss";
 
 function HomePage() {
@@ -39,6 +40,9 @@ function HomePage() {
               and lets build something extraordinary together!{" "}
             </p>
           </div>
+        </div>
+        <div className={styles.BinaryMouseTrackContainer}>
+          <BinaryMatrix textSize={14} />
         </div>
       </div>
     </div>
