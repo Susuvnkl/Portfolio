@@ -16,7 +16,7 @@ function HomePage() {
             <h1>Welcome to my digital space! I'm David Web Developer</h1>
           </div>
         </div>
-        <div className={styles.BinaryMouseTrackContainer}>
+        <div className={styles.BinaryMouseTrackContainer} onClick={() => scrollToSection}>
           <BinaryMatrix textSize={14} />
         </div>
       </div>

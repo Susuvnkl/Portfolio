@@ -52,9 +52,7 @@ const Layout = () => {
       </main>
       <div className={styles.progressBar}>
         {showNavbarPopup && (
-          <div className={styles.NavbarContainer}>
-            {!smallScreen && <Navbar numberOfPages={6} setPage={() => {}} />}
-          </div>
+          <div className={styles.NavbarContainer}>{!smallScreen && <Navbar />}</div>
         )}
         <button onClick={() => setShowNavbarPopup(!showNavbarPopup)}>^^</button>
         <motion.div className={styles.progress} style={{ scaleX }} />

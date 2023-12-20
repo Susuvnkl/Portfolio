@@ -1,6 +1,6 @@
 // BinaryMatrix.tsx
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./BinaryMouseTrack.module.scss";
 
 // wrapper must be in size that divides by 13

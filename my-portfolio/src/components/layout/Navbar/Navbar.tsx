@@ -1,14 +1,12 @@
-import { useState } from "react";
 import styles from "./Navbar.module.scss";
-import { cc } from "../../../utils/Classnames";
 
-interface NavbarProps {
-  setPage: (e: number) => void;
-  numberOfPages: number;
-}
+// interface NavbarProps {
+//   setPage: (e: number) => void;
+//   numberOfPages: number;
+// }
 
-function Navbar(props: NavbarProps) {
-  const { setPage, numberOfPages } = props;
+function Navbar() {
+  // const { setPage, numberOfPages } = props;
   // const [currentPage, setCurrentPage] = useState<number>(1);
 
   // const pages = Array.from({ length: numberOfPages }, (_, i) => i + 1);
