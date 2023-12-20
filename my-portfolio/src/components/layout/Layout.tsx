@@ -7,13 +7,21 @@ import ToggleSwitch from "./ToggleSwitch/ToggleSwitch";
 import useActivePage from "../../hooks/useActivePage";
 import useScrollToSection from "../../hooks/useScrollToSection";
 import { cc } from "../../utils/Classnames";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Layout = () => {
   const { width } = useWindowSize();
   const [smallScreen, setSmallScreen] = useState<boolean>(false);
   const [isSmoothScroll, setIsSmoothScroll] = useState<boolean>(false);
+  const [showNavbarPopup, setShowNavbarPopup] = useState<boolean>(false);
   useActivePage();
   useScrollToSection();
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     if (!width) {
@@ -30,9 +38,6 @@ const Layout = () => {
   return (
     <div className={cc(styles.Layout, !isSmoothScroll && styles.ScrollSnap)}>
       {/* <div className={styles.LayoutContent}> */}
-      <div className={styles.Navbar}>
-        {!smallScreen && <Navbar numberOfPages={6} setPage={() => {}} />}
-      </div>
       <div className={styles.Toggle}>
         {!smallScreen && (
           <ToggleSwitch
@@ -45,6 +50,15 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
+      <div className={styles.progressBar}>
+        {showNavbarPopup && (
+          <div className={styles.NavbarContainer}>
+            {!smallScreen && <Navbar numberOfPages={6} setPage={() => {}} />}
+          </div>
+        )}
+        <button onClick={() => setShowNavbarPopup(!showNavbarPopup)}>^^</button>
+        <motion.div className={styles.progress} style={{ scaleX }} />
+      </div>
     </div>
   );
 };

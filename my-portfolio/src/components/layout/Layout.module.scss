@@ -5,10 +5,31 @@
     top: 10%;
     left: 0;
   }
-  .Navbar {
-    position: fixed;
-    left: 50px;
-    top: 50vh;
+  .progressBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .NavbarContainer {
+      width: 200px;
+      height: 100px;
+      background-color: rgb(128, 125, 125);
+      position: fixed;
+      bottom: 85px;
+      left: 50%;
+    }
+    button {
+      position: fixed;
+      bottom: 60px;
+      left: 50%;
+    }
+    .progress {
+      position: fixed;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: white;
+      bottom: 50px;
+    }
   }
 }
 .ScrollSnap {
