@@ -1,9 +1,16 @@
 .Layout {
-  .Toggle {
-    width: 100%;
+  .TopBar {
     position: fixed;
-    top: 10%;
-    left: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 8px 16px;
+    .Toggle {
+    }
   }
   .progressBar {
     display: flex;

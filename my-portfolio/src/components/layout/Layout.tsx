@@ -37,15 +37,16 @@ const Layout = () => {
 
   return (
     <div className={cc(styles.Layout, !isSmoothScroll && styles.ScrollSnap)}>
-      {/* <div className={styles.LayoutContent}> */}
-      <div className={styles.Toggle}>
-        {!smallScreen && (
-          <ToggleSwitch
-            isOn={isSmoothScroll}
-            handleToggle={() => setIsSmoothScroll(!isSmoothScroll)}
-          />
-        )}
-        {/* </div> */}
+      <div className={styles.TopBar}>
+        <div className={styles.Logo}>LOGO</div>
+        <div className={styles.Toggle}>
+          {!smallScreen && (
+            <ToggleSwitch
+              isOn={isSmoothScroll}
+              handleToggle={() => setIsSmoothScroll(!isSmoothScroll)}
+            />
+          )}
+        </div>
       </div>
       <main>
         <Outlet />
