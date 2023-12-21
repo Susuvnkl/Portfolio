@@ -8,12 +8,14 @@ import useActivePage from "../../hooks/useActivePage";
 import useScrollToSection from "../../hooks/useScrollToSection";
 import { cc } from "../../utils/Classnames";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { useDropdown } from "../../hooks/useDropdown";
 
 const Layout = () => {
   const { width } = useWindowSize();
   const [smallScreen, setSmallScreen] = useState<boolean>(false);
   const [isSmoothScroll, setIsSmoothScroll] = useState<boolean>(false);
   const [showNavbarPopup, setShowNavbarPopup] = useState<boolean>(false);
+  const { ref, visible, toggleDropdown } = useDropdown(false);
   useActivePage();
   useScrollToSection();
   const { scrollYProgress } = useScroll();
@@ -51,11 +53,15 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <div className={styles.progressBar}>
-        {showNavbarPopup && (
-          <div className={styles.NavbarContainer}>{!smallScreen && <Navbar />}</div>
+      <div ref={ref} className={styles.progressBar}>
+        {visible && (
+          <div className={styles.NavbarContainer}>
+            <Navbar />
+          </div>
         )}
-        <button onClick={() => setShowNavbarPopup(!showNavbarPopup)}>^^</button>
+        <button className={styles.NavbarButton} onClick={toggleDropdown}>
+          ^^
+        </button>
         <motion.div className={styles.progress} style={{ scaleX }} />
       </div>
     </div>

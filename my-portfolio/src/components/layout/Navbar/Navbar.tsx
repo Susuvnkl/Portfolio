@@ -24,7 +24,8 @@ function Navbar() {
   };
   return (
     <div className={styles.Navbar}>
-      {/* {pages.map((page) => (
+      <div className={styles.ButtonsContainer}>
+        {/* {pages.map((page) => (
         <button
           key={page}
           className={cc(styles.button, currentPage === page && styles.currentPage)}
@@ -33,10 +34,12 @@ function Navbar() {
           {page}
         </button>
       ))} */}
-      <button onClick={() => scrollToSection("home")}>Home</button>
-      <button onClick={() => scrollToSection("about")}>About</button>
-      <button onClick={() => scrollToSection("skills")}>Skills</button>
-      <button onClick={() => scrollToSection("contact")}>Contact</button>
+        <button onClick={() => scrollToSection("home")}>Home</button>
+        <button onClick={() => scrollToSection("about")}>About</button>
+        <button onClick={() => scrollToSection("skills")}>Skills</button>
+        <button onClick={() => scrollToSection("projects")}>Projects</button>
+        <button onClick={() => scrollToSection("contact")}>Contact</button>
+      </div>
     </div>
   );
 }

@@ -17,17 +17,22 @@
     flex-direction: column;
     justify-content: center;
     .NavbarContainer {
-      width: 200px;
-      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 250px;
+      height: 55px;
       background-color: rgb(128, 125, 125);
       position: fixed;
-      bottom: 85px;
-      left: 50%;
+      bottom: 65px;
+      right: 50%;
+      transform: translate(50%, -50%);
     }
-    button {
+    .NavbarButton {
       position: fixed;
       bottom: 60px;
-      left: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
     }
     .progress {
       position: fixed;
