@@ -14,7 +14,6 @@ const Layout = () => {
   const { width } = useWindowSize();
   const [smallScreen, setSmallScreen] = useState<boolean>(false);
   const [isSmoothScroll, setIsSmoothScroll] = useState<boolean>(false);
-  const [showNavbarPopup, setShowNavbarPopup] = useState<boolean>(false);
   const { ref, visible, toggleDropdown } = useDropdown(false);
   useActivePage();
   useScrollToSection();
