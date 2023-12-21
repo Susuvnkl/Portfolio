@@ -3,7 +3,9 @@ import { useEffect, useRef, useState } from "react";
 const useDropdown = (initial: boolean) => {
   // state
   const [visible, setVisible] = useState(initial);
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   const ref = useRef<any>(null);
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
 
   // functions
   const toggleDropdown = () => {
