@@ -1,0 +1,202 @@
+.ScrollToggleSwitch {
+  &:hover {
+    scale: 1.05;
+    left: -2px;
+    .UpArrowOne {
+      animation: fadeInOut1 3s linear infinite;
+    }
+    .UpArrowTwo {
+      animation: fadeInOut2 3s linear infinite;
+    }
+    .UpArrowThree {
+      animation: fadeInOut3 3s linear infinite;
+    }
+    .DownArrowOne {
+      animation: fadeInOut1 3s linear infinite;
+    }
+    .DownArrowTwo {
+      animation: fadeInOut2 3s linear infinite;
+    }
+    .DownArrowThree {
+      animation: fadeInOut3 3s linear infinite;
+    }
+  }
+
+  .UpArrowOne {
+    bottom: -10px;
+  }
+  .UpArrowTwo {
+    bottom: 22px;
+  }
+  .UpArrowThree {
+    bottom: 54px;
+  }
+  .UpArrowOne,
+  .UpArrowTwo,
+  .UpArrowThree {
+    left: 42px;
+    position: absolute;
+    scale: 0.7;
+    opacity: 0;
+  }
+  .Mouse {
+    position: relative;
+    svg {
+      position: absolute;
+    }
+    .Scroll {
+      animation: moveUpDown 2.5s linear infinite;
+    }
+    .Scroll:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+    }
+  }
+  .DownArrowOne,
+  .DownArrowTwo,
+  .DownArrowThree {
+    rotate: (180deg);
+    position: absolute;
+    scale: 0.7;
+    left: 48px;
+    opacity: 0;
+  }
+  .DownArrowOne {
+    top: 205px;
+  }
+  .DownArrowTwo {
+    top: 237px;
+  }
+  .DownArrowThree {
+    top: 269px;
+  }
+
+  &.ScrollSnap {
+    .UpArrowOne {
+      animation: fadeInOut1 3s linear infinite;
+    }
+    .UpArrowTwo {
+      animation: fadeInOut2 3s linear infinite;
+    }
+    .UpArrowThree {
+      animation: fadeInOut3 3s linear infinite;
+    }
+    .DownArrowOne {
+      animation: fadeInOut1 3s linear infinite;
+    }
+    .DownArrowTwo {
+      animation: fadeInOut2 3s linear infinite;
+    }
+    .DownArrowThree {
+      animation: fadeInOut3 3s linear infinite;
+    }
+    .Mouse {
+      .Scroll {
+        animation-play-state: paused;
+      }
+    }
+    &:hover {
+      scale: 1.05;
+      left: -2px;
+      .Mouse {
+        .Scroll {
+          animation: moveUpDown 2.5s linear infinite;
+        }
+      }
+      .UpArrowOne,
+      .UpArrowTwo,
+      .UpArrowThree,
+      .DownArrowOne,
+      .DownArrowTwo,
+      .DownArrowThree {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes moveUpDown {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut3 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 0;
+  }
+  54% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
