@@ -3,12 +3,13 @@ import useWindowSize from "../../hooks/useWindowSize";
 import styles from "./Layout.module.scss";
 import Navbar from "./Navbar/Navbar";
 import { useEffect, useState } from "react";
-import ToggleSwitch from "./ToggleSwitch/ToggleSwitch";
 import useActivePage from "../../hooks/useActivePage";
 import useScrollToSection from "../../hooks/useScrollToSection";
 import { cc } from "../../utils/Classnames";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useDropdown } from "../../hooks/useDropdown";
+import Logo from "./Logo/Logo";
+import ScrollToggleSwitch from "./ScrollToggleSwitch/ScrollToggleSwitch";
 
 const Layout = () => {
   const { width } = useWindowSize();
@@ -38,15 +39,20 @@ const Layout = () => {
 
   return (
     <div className={cc(styles.Layout, !isSmoothScroll && styles.ScrollSnap)}>
-      <div className={styles.TopBar}>
-        <div className={styles.Logo}>LOGO</div>
-        <div className={styles.Toggle}>
-          {!smallScreen && (
-            <ToggleSwitch
+      <div className={styles.Toggle}>
+        {!smallScreen && (
+          <>
+            <ScrollToggleSwitch
+              Theme="Dark"
               isOn={isSmoothScroll}
               handleToggle={() => setIsSmoothScroll(!isSmoothScroll)}
             />
-          )}
+          </>
+        )}
+      </div>
+      <div className={styles.TopBar}>
+        <div className={styles.Logo}>
+          <Logo />
         </div>
       </div>
       <main>
@@ -58,9 +64,11 @@ const Layout = () => {
             <Navbar />
           </div>
         )}
-        <button className={styles.NavbarButton} onClick={toggleDropdown}>
-          ^^
-        </button>
+        {!smallScreen && (
+          <button className={styles.NavbarButton} onClick={toggleDropdown}>
+            ^^
+          </button>
+        )}
         <motion.div className={styles.progress} style={{ scaleX }} />
       </div>
     </div>

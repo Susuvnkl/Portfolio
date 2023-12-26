@@ -9,8 +9,12 @@
     align-items: center;
     height: 8vh;
     padding: 8px 16px;
-    .Toggle {
-    }
+  }
+  .Toggle {
+    position: fixed;
+    scale: 0.25;
+    bottom: 125px;
+    left: 20px;
   }
   .progressBar {
     display: flex;
@@ -20,19 +24,20 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      width: 250px;
-      height: 55px;
-      background-color: rgb(128, 125, 125);
+      background-color: transparent;
       position: fixed;
-      bottom: 65px;
+      bottom: 50px;
       right: 50%;
       transform: translate(50%, -50%);
     }
     .NavbarButton {
       position: fixed;
-      bottom: 60px;
+      bottom: 30px;
       right: 50%;
       transform: translate(50%, -50%);
+      &:hover {
+        cursor: pointer;
+      }
     }
     .progress {
       position: fixed;
@@ -40,7 +45,7 @@
       right: 0;
       height: 5px;
       background: white;
-      bottom: 50px;
+      bottom: 25px;
     }
   }
 }
