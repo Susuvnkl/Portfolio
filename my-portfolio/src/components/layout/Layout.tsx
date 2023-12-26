@@ -66,7 +66,7 @@ const Layout = () => {
         )}
         {!smallScreen && (
           <button className={styles.NavbarButton} onClick={toggleDropdown}>
-            ^^
+            <h3>^</h3>
           </button>
         )}
         <motion.div className={styles.progress} style={{ scaleX }} />
