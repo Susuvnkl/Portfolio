@@ -10,6 +10,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { useDropdown } from "../../hooks/useDropdown";
 import Logo from "./Logo/Logo";
 import ScrollToggleSwitch from "./ScrollToggleSwitch/ScrollToggleSwitch";
+import SendMessageIcon from "../common/SendMessageIcon/SendMessageIcon";
 
 const Layout = () => {
   const { width } = useWindowSize();
@@ -24,6 +25,13 @@ const Layout = () => {
     damping: 30,
     restDelta: 0.001,
   });
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     if (!width) {
@@ -54,6 +62,7 @@ const Layout = () => {
         <div className={styles.Logo}>
           <Logo />
         </div>
+        <SendMessageIcon size="small" onClick={() => scrollToSection("contact")} />
       </div>
       <main>
         <Outlet />
