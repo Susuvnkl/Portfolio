@@ -1,4 +1,5 @@
 import styles from "./AboutPage.module.scss";
+import Hologram from "../../assets/hologram/small hologram.png";
 
 function AboutPage() {
   const scrollToSection = (sectionId: string) => {
@@ -12,6 +13,7 @@ function AboutPage() {
       <div className={styles.AboutPage}>
         <div className={styles.content}>
           <div>
+            <h1>Hi Im David :)</h1>
             <p>
               Passionate and self-driven full-stack developer ready to bring innovation to life.
             </p>
@@ -36,6 +38,9 @@ function AboutPage() {
               and lets build something extraordinary together!{" "}
             </p>
           </div>
+        </div>
+        <div className={styles.HologramPhotoContainer}>
+          <img src={Hologram} alt="Hologram photo"></img>
         </div>
       </div>
     </div>
