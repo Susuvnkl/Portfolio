@@ -9,7 +9,6 @@ import FigmaIcon from "../../components/common/Icons/FigmaIcon/FigmaIcon";
 import ReactIcon from "../../components/common/Icons/ReactIcon/ReactIcon";
 import ReduxIcon from "../../components/common/Icons/ReduxIcon/ReduxIcon";
 import NodeJs1Icon from "../../components/common/Icons/NodeJs1Icon/NodeJs1Icon";
-import PremierIcon from "../../components/common/Icons/PremierIcon/PremierIcon";
 import FireBaseIcon from "../../components/common/Icons/FireBaseIcon/FireBaseIcon";
 import LightroomIcon from "../../components/common/Icons/LightroomIcon/LightroomIcon";
 import PhotoshopIcon from "../../components/common/Icons/PhotoshopIcon/PhotoshopIcon";
@@ -17,6 +16,7 @@ import TypeScriptIcon from "../../components/common/Icons/TypeScriptIcon/TypeScr
 import SQLIcon from "../common/Icons/SQLIcon/SQLIcon";
 import NoSQLIcon from "../common/Icons/NoSQLIcon/NoSQLIcon";
 import JSIcon from "../common/Icons/JSIcon/JSIcon";
+import PremiereIcon from "../common/Icons/PremierIcon/PremiereIcon";
 
 interface LogoItemProps {
   LogoName: string;
@@ -36,7 +36,7 @@ function LogoItem(props: LogoItemProps) {
       {LogoName === "React" && <ReactIcon />}
       {LogoName === "Redux" && <ReduxIcon />}
       {LogoName === "Node.Js" && <NodeJs1Icon />}
-      {LogoName === "Premier" && <PremierIcon />}
+      {LogoName === "Premiere" && <PremiereIcon />}
       {LogoName === "FireBase" && <FireBaseIcon />}
       {LogoName === "Lightroom" && <LightroomIcon />}
       {LogoName === "Photoshop" && <PhotoshopIcon />}

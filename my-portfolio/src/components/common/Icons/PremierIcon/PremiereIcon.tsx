@@ -1,6 +1,6 @@
-import styles from "./PremierIcon.module.scss";
+import styles from "./PremiereIcon.module.scss";
 
-function PremierIcon() {
+function PremiereIcon() {
   return (
     <div className={styles.Icon}>
       <svg
@@ -28,4 +28,4 @@ function PremierIcon() {
   );
 }
 
-export default PremierIcon;
+export default PremiereIcon;

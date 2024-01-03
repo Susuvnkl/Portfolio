@@ -17,7 +17,7 @@ const Logos = [
   "Git",
   "Sass",
   "Figma",
-  "Premier",
+  "Premiere",
   "Photoshop",
   "Lightroom",
 ];
