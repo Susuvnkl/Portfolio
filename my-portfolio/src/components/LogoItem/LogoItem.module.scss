@@ -1,0 +1,11 @@
+.LogoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: grayscale(1);
+  transition: filter 0.35s ease;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
