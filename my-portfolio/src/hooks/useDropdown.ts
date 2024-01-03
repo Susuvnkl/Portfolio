@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 const useDropdown = (initial: boolean) => {
-  // state
   const [visible, setVisible] = useState(initial);
   /* eslint-disable  @typescript-eslint/no-explicit-any */
   const ref = useRef<any>(null);
   /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-  // functions
   const toggleDropdown = () => {
     setVisible((prevState) => !prevState);
   };
@@ -20,21 +18,18 @@ const useDropdown = (initial: boolean) => {
     setVisible(false);
   };
 
-  // close when click outside
   const dropdownClickHandler = (event: any) => {
     if (ref.current && !ref.current.contains(event.target)) {
       setVisible(false);
     }
   };
 
-  // close when esc
   const dropdownKeyHandler = (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       setVisible(false);
     }
   };
 
-  // effects
   useEffect(() => {
     document.addEventListener("click", dropdownClickHandler, true);
     document.addEventListener("keydown", dropdownKeyHandler, true);
