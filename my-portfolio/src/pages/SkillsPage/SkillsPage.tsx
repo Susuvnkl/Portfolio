@@ -5,7 +5,7 @@ function SkillsPage() {
   return (
     <div id="skills" className={styles.PageSection}>
       <div className={styles.SkillsPage}>
-        <h1>My Skills</h1>
+        <h1>Design-Driven Web Developer</h1>
         <div className={styles.Content}>
           <p>
             With a keen eye for design, I seamlessly merge my expertise in both graphic design and
@@ -18,9 +18,7 @@ function SkillsPage() {
             interfaces to implementing robust back-end solutions.
           </p>
         </div>
-        {/* <div className={styles.LogosContainer}> */}
         <LogosGrid />
-        {/* </div> */}
       </div>
     </div>
   );
