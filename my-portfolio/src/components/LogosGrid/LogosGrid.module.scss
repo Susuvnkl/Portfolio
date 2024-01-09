@@ -6,4 +6,5 @@
   grid-template-columns: repeat(9, 1fr);
   grid-gap: 30px; /* Adjust the gap between grid items */
   row-gap: 25px;
+  min-width: fit-content;
 }
