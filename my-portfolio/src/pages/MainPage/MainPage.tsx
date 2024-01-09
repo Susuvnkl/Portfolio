@@ -1,6 +1,6 @@
 import AboutPage from "../AboutPage/AboutPage";
 import ContactPage from "../ContactPage/ContactPage";
-import HomePage from "../HomePage/HomePage";
+// import HomePage from "../HomePage/HomePage";
 import ProjectsPage from "../ProjectsPage/ProjectsPage";
 import SkillsPage from "../SkillsPage/SkillsPage";
 import styles from "./MainPage.module.scss";
@@ -8,9 +8,9 @@ import styles from "./MainPage.module.scss";
 function MainPage() {
   return (
     <div className={styles.MainPage}>
-      <section>
+      {/* <section>
         <HomePage />
-      </section>
+      </section> */}
       <section>
         <AboutPage />
       </section>

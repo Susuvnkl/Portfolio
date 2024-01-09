@@ -13,7 +13,8 @@ function AboutPage() {
       <div className={styles.AboutPage}>
         <div className={styles.content}>
           <div>
-            <h1>Hi Im David :)</h1>
+            {/* <h1>Hi Im David :)</h1> */}
+            <h1>Welcome to my digital space! I'm David Web Developer</h1>
             <p>
               Passionate and self-driven full-stack developer ready to bring innovation to life.
             </p>

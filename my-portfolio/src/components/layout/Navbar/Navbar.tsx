@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <div className={styles.Navbar}>
       <div className={styles.ButtonsContainer}>
-        <button onClick={() => scrollToSection("home")}>Home</button>
+        {/* <button onClick={() => scrollToSection("home")}>Home</button> */}
         <button onClick={() => scrollToSection("about")}>About</button>
         <button onClick={() => scrollToSection("skills")}>Skills</button>
         <button onClick={() => scrollToSection("projects")}>Projects</button>
