@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 
 const useScrollToSection = () => {
-  console.log("test render 2");
   useEffect(() => {
-    console.log("test effect render 2");
-
     const hash = window.location.hash;
     if (hash) {
       const sectionId = hash.replace("#", "");

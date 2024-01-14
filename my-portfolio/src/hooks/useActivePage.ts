@@ -4,13 +4,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 const useActivePage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log("test render");
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "skills", "contact"];
       let foundActive = false;
-      console.log("test effect render", location);
 
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId);

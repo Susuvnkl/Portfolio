@@ -10,10 +10,6 @@ function useWindowSize() {
   });
 
   useEffect(() => {
-    console.log("test", {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
     function handleResize() {
       setWindowSize({
         width: window.innerWidth,
