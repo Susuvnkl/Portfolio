@@ -1,12 +1,15 @@
 import styles from "./PetAdoptionWeb.module.scss";
-
-function PetAdoptionWeb() {
+interface PetAdoptionWebProps {
+  mode?: "mobile";
+}
+function PetAdoptionWeb(props: PetAdoptionWebProps) {
+  const { mode } = props;
   return (
     <div className={styles.PetAdoptionWeb}>
       <div className={styles.Icon}>
         <svg
-          width="500"
-          height="274"
+          width={mode ? "350" : "500"}
+          height={mode ? "350" : "274"}
           viewBox="0 0 500 274"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
