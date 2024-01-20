@@ -37,10 +37,12 @@ const Layout = () => {
     if (!width) {
       return;
     } else {
-      if (width < 500) {
+      if (width < 1000) {
         setSmallScreen(true);
+        setIsSmoothScroll(true);
       } else {
         setSmallScreen(false);
+        setIsSmoothScroll(false);
       }
     }
   }, [width]);
@@ -62,7 +64,10 @@ const Layout = () => {
         <div className={styles.Logo}>
           <Logo />
         </div>
-        <SendMessageIcon size="small" onClick={() => scrollToSection("contact")} />
+        {!smallScreen && (
+          <SendMessageIcon size="small" onClick={() => scrollToSection("contact")} />
+        )}
+        {smallScreen && <div>=</div>}
       </div>
       <main>
         <Outlet />
