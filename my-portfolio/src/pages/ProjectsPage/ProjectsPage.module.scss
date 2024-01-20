@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .PageSection {
   min-height: 100vh;
   width: 100%;
@@ -6,6 +8,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: $small-screen) {
+    padding-top: 0;
+  }
   .ContentContainer {
     .WebsiteLink {
       font-weight: 700;
@@ -56,6 +61,6 @@
 
 @keyframes mobileAnimation {
   to {
-    transform: translate(-50%, -53%); /* Move 10% up */
+    transform: translate(-50%, -53%);
   }
 }
