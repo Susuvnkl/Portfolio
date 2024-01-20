@@ -45,10 +45,22 @@
     .AboutPage {
       display: flex;
       flex-direction: column;
-      .content,
+      align-items: center;
+      .content {
+        padding: 0 25px;
+        width: 90vw;
+        min-width: unset;
+      }
       .HologramPhotoContainer {
-        padding: 25px;
-        width: 100vw;
+        width: 90vw;
+        min-width: unset;
+        img {
+          max-width: 80vw;
+          // width: inherit;
+          scale: 0.8;
+        }
+      }
+      .HologramPhotoContainer {
       }
     }
   }
