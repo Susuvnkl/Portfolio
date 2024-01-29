@@ -43,6 +43,7 @@
     position: relative;
     svg {
       position: absolute;
+      border: 2px solid red;
     }
     .Scroll {
       animation: moveUpDown 2.5s linear infinite;

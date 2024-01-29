@@ -3,14 +3,25 @@ import SlickSlider from "../../components/SlickSlider/SlickSlider";
 import ProjectItem, { ProjectItemProps } from "./Projects/ProjectItem";
 // import PetAdoptionMedia from "./Projects/PetAdoptionMedia/PetAdoptionMedia";
 import LetsPetLogo from "../../components/common/Icons/LetsPetLogo/LetsPetLogo";
+import PetAdoptionWeb from "../../components/common/Icons/PetAdoptionWeb/PetAdoptionWeb";
 
 const projects: ProjectItemProps[] = [
   {
     index: "0",
+    id: "",
+    media: "",
+    logo: "",
+    project_type: "",
+    description: "",
+    technologies: "",
+    project_link: "",
+    deploy_location: "",
+    project_primary_color: "",
+  },
+  {
+    index: "1",
     id: "pet_adoption",
-    media: "Test",
-    // media: <PetAdoptionMedia />,
-
+    media: <PetAdoptionWeb />,
     logo: <LetsPetLogo />,
     project_type: "Full stack project",
     description:
@@ -19,18 +30,6 @@ const projects: ProjectItemProps[] = [
     project_link: "https://petadoption-client.vercel.app/",
     deploy_location: "Vercel",
     project_primary_color: "ffe294",
-  },
-  {
-    index: "1",
-    id: "string",
-    media: "string",
-    logo: "ReactNode",
-    project_type: "string",
-    description: "string",
-    technologies: "string",
-    project_link: "string",
-    deploy_location: "string",
-    project_primary_color: "string",
   },
 ];
 

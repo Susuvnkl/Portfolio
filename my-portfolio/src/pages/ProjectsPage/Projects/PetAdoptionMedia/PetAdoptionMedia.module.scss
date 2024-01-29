@@ -1,0 +1,67 @@
+@import "../../../../styles/variables.scss";
+
+.PetAdoptionMedia {
+  position: relative;
+  width: 800px;
+  height: 70vh;
+
+  .PetWeb,
+  .PetMobile1,
+  .PetMobile2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .PetWeb {
+    left: 43%;
+    top: 65%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .PetMobile1 {
+    left: 55%;
+    top: 51%;
+  }
+  .PetMobile2 {
+    left: 68%;
+    top: 58%;
+    animation-delay: 01s;
+  }
+  .PetMobile2,
+  .PetMobile1 {
+    animation: mobileAnimation 1.5s infinite alternate;
+    &:hover {
+      cursor: pointer;
+      animation-play-state: paused;
+    }
+  }
+  @media screen and (max-width: $small-screen) {
+    width: unset;
+    .PetWeb {
+      position: absolute;
+      transform-origin: center;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+  }
+  .PhoneWrapper {
+    @media screen and (max-width: $small-screen) {
+      display: flex;
+      flex-direction: column;
+    }
+    .PetMobile1 {
+      top: 43%;
+    }
+    .PetMobile2 {
+      top: 51%;
+      left: 78%;
+    }
+  }
+}
+
+@keyframes mobileAnimation {
+  to {
+    transform: translate(-50%, -53%);
+  }
+}
