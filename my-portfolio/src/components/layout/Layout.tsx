@@ -49,7 +49,7 @@ const Layout = () => {
 
   return (
     <div className={cc(styles.Layout, !isSmoothScroll && styles.ScrollSnap)}>
-      <div className={styles.Toggle}>
+      {/* <div className={styles.Toggle}>
         {!smallScreen && (
           <>
             <ScrollToggleSwitch
@@ -59,15 +59,26 @@ const Layout = () => {
             />
           </>
         )}
-      </div>
+      </div> */}
       <div className={styles.TopBar}>
         <div className={styles.Logo}>
           <Logo />
         </div>
+        {/* <div className={styles.RigthSideContainer}> */}
         {!smallScreen && (
-          <SendMessageIcon size="small" onClick={() => scrollToSection("contact")} />
+          <div>
+            <div className={styles.TopBarToggle}>
+              <ScrollToggleSwitch
+                Theme="Dark"
+                isOn={isSmoothScroll}
+                handleToggle={() => setIsSmoothScroll(!isSmoothScroll)}
+              />
+            </div>
+            <SendMessageIcon size="small" onClick={() => scrollToSection("contact")} />
+          </div>
         )}
         {smallScreen && <div>=</div>}
+        {/* </div> */}
       </div>
       <main>
         <Outlet />

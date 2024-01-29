@@ -21,6 +21,12 @@
         rgba(31, 31, 31, 0)
       );
     }
+    .TopBarToggle {
+      margin-top: 3px;
+      position: fixed;
+      scale: 0.13;
+      right: 75px;
+    }
   }
   .Toggle {
     position: fixed;
