@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "index": "0",
+      "id": "pet_adoption",
+      "media": "string",
+      "logo": "ReactNode",
+      "project_type": "Full stack project",
+      "description": "Demo pet adoption system with users, admin dashboard, likes, adopting and fostering methods",
+      "technologies": "React, Node.js, MySQL, Bootstrap, NotiStack, Figma, Adobe Photoshop",
+      "project_link": "https://petadoption-client.vercel.app/",
+      "deploy_location": "Vercel",
+      "project_primary_color": "#ffe294"
+    },
+    {
+      "index": "1",
+      "id": "string",
+      "media": "string",
+      "logo": "ReactNode",
+      "project_type": "string",
+      "description": "string",
+      "technologies": "string",
+      "project_link": "string",
+      "deploy_location": "string",
+      "project_primary_color": "string"
+    }
+  ]
+}
