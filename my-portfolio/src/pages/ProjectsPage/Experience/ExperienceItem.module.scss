@@ -1,0 +1,85 @@
+@import "../../../styles/variables.scss";
+
+.ExperienceItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 70vh;
+  padding: 0 30px;
+  .Content {
+    .WebsiteLink {
+      font-weight: 700;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  @media screen and (max-width: $small-screen) {
+    padding-top: 8vh;
+    justify-content: unset;
+  }
+}
+
+.Square {
+  position: relative;
+  width: 50%;
+  max-width: 70vh;
+  max-height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.Media,
+.Content {
+  padding: 15px;
+  flex: 1;
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: $small-screen) {
+  .ExperienceItem {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .Square {
+    position: relative;
+    // height: 50%;
+    width: unset;
+    max-height: 70vw;
+    max-width: unset;
+  }
+
+  .Square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .Square:first-of-type {
+    height: 30%;
+  }
+
+  .Square:last-of-type {
+    height: 70%;
+  }
+}
