@@ -64,7 +64,6 @@ const Layout = () => {
         <div className={styles.Logo}>
           <Logo />
         </div>
-        {/* <div className={styles.RigthSideContainer}> */}
         {!smallScreen && (
           <div>
             <div className={styles.TopBarToggle}>
@@ -78,7 +77,6 @@ const Layout = () => {
           </div>
         )}
         {smallScreen && <div>=</div>}
-        {/* </div> */}
       </div>
       <main>
         <Outlet />
