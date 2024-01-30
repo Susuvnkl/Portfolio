@@ -7,7 +7,7 @@ const useActivePage = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "skills", "contact"];
+      const sections = ["home", "about", "experience", "skills", "contact"];
       let foundActive = false;
 
       for (const sectionId of sections) {

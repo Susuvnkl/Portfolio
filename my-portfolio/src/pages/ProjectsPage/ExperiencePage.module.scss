@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+
+.PageSection {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $small-screen) {
+    padding-top: 0;
+  }
+  .FirstSlideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    // height: auto; /* Adjusted to auto for better mobile responsiveness */
+    height: 70vh;
+    padding: 12px;
+    svg {
+      width: 100%;
+      height: 100%;
+
+      @media screen and (max-width: 500px) {
+        padding-bottom: 50vh;
+      }
+    }
+    svg text {
+      animation: stroke 8s infinite alternate;
+      stroke-width: 1;
+      stroke: #c8c8c8;
+      font-size: 70px;
+      @media screen and (max-width: $small-screen) {
+        font-size: 48px;
+      }
+
+      @media screen and (max-width: 500px) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #c8c8c8;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 1;
+  }
+  50% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #c8c8c8;
+  }
+  60% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #c8c8c8;
+    stroke-width: 3;
+  }
+  100% {
+    fill: #c8c8c8;
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
