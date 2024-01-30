@@ -16,6 +16,10 @@
       }
     }
   }
+  @media screen and (max-width: $small-screen) {
+    padding-top: 8vh;
+    justify-content: unset;
+  }
 }
 .Square {
   position: relative;

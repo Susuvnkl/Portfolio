@@ -33,49 +33,28 @@ function ProjectItem(props: ProjectItemProps) {
 
   return (
     <div className={styles.ProjectItem} key={index}>
-      {index === "0" ? (
-        <div className={styles.Square}>
-          <div className={styles.Content}>
-            <div className={styles.LogoContainer}>
-              <h1>My Previous Experience & Projects</h1>
-            </div>
-            {/* <p>{description}</p> */}
-
-            <strong
-            // className={styles.WebsiteLink}
-            // style={{ color: `#${project_primary_color}` }}
-            // onClick={openPetAdoptionUrl}
-            >
-              {/* See experience & projects */}
-            </strong>
-          </div>
+      <div className={styles.Square}>
+        <div className={styles.Media}>{media}</div>
+      </div>
+      <div className={styles.Square}>
+        <div className={styles.Content}>
+          <div className={styles.LogoContainer}>{logo}</div>
+          <p>{project_type}</p>
+          <p>{description}</p>
+          <p>
+            <strong>Build with:</strong> {""}
+            {technologies}, Deployed with {""}
+            {deploy_location}.
+          </p>
+          <p
+            className={styles.WebsiteLink}
+            style={{ color: `#${project_primary_color}` }}
+            onClick={openPetAdoptionUrl}
+          >
+            Visit the app
+          </p>
         </div>
-      ) : (
-        <>
-          <div className={styles.Square}>
-            <div className={styles.Media}>{media}</div>
-          </div>
-          <div className={styles.Square}>
-            <div className={styles.Content}>
-              <div className={styles.LogoContainer}>{logo}</div>
-              <p>{project_type}</p>
-              <p>{description}</p>
-              <p>
-                <strong>Build with:</strong> {""}
-                {technologies}, Deployed with {""}
-                {deploy_location}.
-              </p>
-              <p
-                className={styles.WebsiteLink}
-                style={{ color: `#${project_primary_color}` }}
-                onClick={openPetAdoptionUrl}
-              >
-                Visit the app
-              </p>
-            </div>
-          </div>
-        </>
-      )}
+      </div>
     </div>
   );
 }
