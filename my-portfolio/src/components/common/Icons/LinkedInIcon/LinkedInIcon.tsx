@@ -1,3 +1,5 @@
+import styles from "./LinkedInIcon.module.scss";
+
 const LINKEDIN_PROFILE_URL: string = "https://www.linkedin.com/in/david-bernstein-a53312252/";
 
 function LinkedInIcon() {
@@ -6,6 +8,7 @@ function LinkedInIcon() {
   };
   return (
     <svg
+      className={styles.LinkedInIcon}
       onClick={goToLinkedIn}
       width={"100%"}
       height={"100%"}
