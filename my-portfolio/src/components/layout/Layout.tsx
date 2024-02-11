@@ -11,6 +11,7 @@ import { useDropdown } from "../../hooks/useDropdown";
 import Logo from "./Logo/Logo";
 import ScrollToggleSwitch from "./ScrollToggleSwitch/ScrollToggleSwitch";
 import SendMessageIcon from "../common/SendMessageIcon/SendMessageIcon";
+import LinkedInIcon from "../common/Icons/LinkedInIcon/LinkedInIcon";
 
 const Layout = () => {
   const { width } = useWindowSize();
@@ -66,6 +67,9 @@ const Layout = () => {
         </div>
         {!smallScreen && (
           <div>
+            <div className={styles.LinkedInButton}>
+              <LinkedInIcon />
+            </div>
             <div className={styles.TopBarToggle}>
               <ScrollToggleSwitch
                 Theme="Dark"
