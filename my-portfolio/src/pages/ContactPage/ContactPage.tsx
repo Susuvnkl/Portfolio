@@ -1,3 +1,4 @@
+import LinkedInIcon from "../../components/common/Icons/LinkedInIcon/LinkedInIcon";
 import SendMessageIcon from "../../components/common/SendMessageIcon/SendMessageIcon";
 import styles from "./ContactPage.module.scss";
 import { useForm, ValidationError } from "@formspree/react";
@@ -28,6 +29,9 @@ function ContactPage() {
                 <button type="submit" disabled={state.submitting}>
                   <SendMessageIcon size="small" />
                 </button>
+              </div>
+              <div className={styles.IconsContainer}>
+                <LinkedInIcon />
               </div>
             </form>
           </>
