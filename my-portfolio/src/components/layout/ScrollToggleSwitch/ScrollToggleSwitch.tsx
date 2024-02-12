@@ -2,7 +2,7 @@ import styles from "./ScrollToggleSwitch.module.scss";
 import { cc } from "../../../utils/Classnames";
 
 interface ScrollToggleSwitchProps {
-  Theme: "Dark" | "Bright";
+  Theme: IconColorMode["color_mode"];
   isOn: boolean;
   handleToggle: () => void;
 }
@@ -88,7 +88,7 @@ function ScrollToggleSwitch(props: ScrollToggleSwitchProps) {
       </div>
 
       <div className={styles.Mouse}>
-        {Theme === "Dark" && (
+        {Theme === "dark" && (
           <svg
             width="151"
             height="220"
@@ -111,7 +111,7 @@ function ScrollToggleSwitch(props: ScrollToggleSwitchProps) {
             </defs>
           </svg>
         )}
-        {Theme === "Bright" && (
+        {Theme === "bright" && (
           <svg
             width="151"
             height="220"
