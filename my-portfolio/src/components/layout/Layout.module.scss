@@ -21,6 +21,11 @@
         rgba(31, 31, 31, 0)
       );
     }
+    .SettingsButton {
+      width: 30px;
+      position: fixed;
+      right: 94px;
+    }
     .LinkedInButton {
       width: 30px;
       position: fixed;
@@ -30,7 +35,7 @@
       margin-top: 3px;
       position: fixed;
       scale: 0.13;
-      right: 115px;
+      right: 150px;
     }
   }
   .Toggle {

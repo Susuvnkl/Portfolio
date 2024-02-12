@@ -12,6 +12,9 @@ import Logo from "./Logo/Logo";
 import ScrollToggleSwitch from "./ScrollToggleSwitch/ScrollToggleSwitch";
 import SendMessageIcon from "../common/SendMessageIcon/SendMessageIcon";
 import LinkedInIcon from "../common/Icons/LinkedInIcon/LinkedInIcon";
+import SettingsIcon from "../common/Icons/SettingsIcon/SettingsIcon";
+
+const COLOR_MODE = "dark";
 
 const Layout = () => {
   const { width } = useWindowSize();
@@ -67,12 +70,15 @@ const Layout = () => {
         </div>
         {!smallScreen && (
           <div>
+            <div className={styles.SettingsButton}>
+              <SettingsIcon color_mode={COLOR_MODE} />
+            </div>
             <div className={styles.LinkedInButton}>
-              <LinkedInIcon />
+              <LinkedInIcon color_mode={COLOR_MODE} />
             </div>
             <div className={styles.TopBarToggle}>
               <ScrollToggleSwitch
-                Theme="Dark"
+                Theme={COLOR_MODE}
                 isOn={isSmoothScroll}
                 handleToggle={() => setIsSmoothScroll(!isSmoothScroll)}
               />
