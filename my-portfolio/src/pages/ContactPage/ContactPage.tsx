@@ -31,7 +31,7 @@ function ContactPage() {
                 </button>
               </div>
               <div className={styles.IconsContainer}>
-                <LinkedInIcon />
+                <LinkedInIcon color_mode="dark" />
               </div>
             </form>
           </>
